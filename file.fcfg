@@ -1,0 +1,17 @@
+%start S
+S[SEM=(?vp+?np)]-> VP[SEM=?vp] NP[SEM=?np]
+VP[SEM=(?det+?v)]-> Det[SEM=?det] V[SEM=?v]
+Det[SEM='SELECT']-> 'What'
+V[SEM='']-> 'is'
+NP[SEM=(?det+?np)]->Det[SEM=?det] NP[SEM=?np]
+Det[SEM='']->'the'
+NP[SEM=(?np+?pp)]->NP[SEM=?np] PP[SEM=?pp]
+NP[SEM=(?jj+?n)]->JJ[SEM=?jj] N[SEM=?n]
+JJ[SEM='']->'current'
+N[SEM='progress from user']->'status'
+PP[SEM=(?p+?np)]->P[SEM=?p] NP[SEM=?np] 
+P[SEM='']->'of'
+NP[SEM=(?det+?n)]->Det[SEM=?det] N[SEM=?n]
+Det[SEM='WHERE uname="{}"']->'my'
+N[SEM='']->'loan'
+
